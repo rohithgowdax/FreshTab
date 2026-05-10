@@ -208,6 +208,4 @@ document.getElementById("clearAllButton").addEventListener("click", async () => 
   await render("Selection cleared.");
 });
 
-document.getElementById("shortcutHint").textContent = getShortcutLabel();
-
 void render();

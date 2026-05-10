@@ -1,44 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshTab</title>
-    <link rel="stylesheet" href="popup.css">
-  </head>
-  <body>
-    <main class="popup">
-      <h1>FreshTab</h1>
 
-      <section class="panel">
-        <label class="toggle">
-          <input id="closeCleanupToggle" type="checkbox">
-          <span>Clear selected tabs on close</span>
-        </label>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshTab</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
 
-        <label class="toggle">
-          <input id="refreshCleanupToggle" type="checkbox">
-          <span>Enable fresh reload shortcut</span>
-        </label>
+<body>
+  <main class="popup">
+    <h1>FreshTab</h1>
 
-        <button id="freshReloadButton" class="primaryButton" type="button">Fresh reload selected tabs</button>
+    <section class="panel">
+      <label class="toggle">
+        <input id="closeCleanupToggle" type="checkbox">
+        <span>Clear selected tabs on close</span>
+      </label>
 
-        <p id="statusText" class="status"></p>
-        <p class="note">Shortcut: <span id="shortcutHint">Ctrl+Shift+R</span>. Chrome keeps normal refresh on its own shortcut.</p>
-      </section>
+      <label class="toggle">
+        <input id="refreshCleanupToggle" type="checkbox">
+        <span>Enable fresh reload shortcut</span>
+      </label>
 
-      <section class="panel">
-        <div class="tabsHeader">
-          <h2>Choose tabs</h2>
-          <div class="actions">
-            <button id="selectActiveButton" type="button">Active</button>
-            <button id="selectAllButton" type="button">All</button>
-            <button id="clearAllButton" type="button">Clear</button>
-          </div>
+      <button id="freshReloadButton" class="primaryButton" type="button">Fresh reload selected tabs</button>
+
+      <p id="statusText" class="status"></p>
+
+    </section>
+
+    <section class="panel">
+      <div class="tabsHeader">
+        <h2>Choose tabs</h2>
+        <div class="actions">
+          <button id="selectActiveButton" type="button">Active</button>
+          <button id="selectAllButton" type="button">All</button>
+          <button id="clearAllButton" type="button">Clear</button>
         </div>
-        <div id="tabList" class="tabList"></div>
-      </section>
-    </main>
-    <script src="popup.js"></script>
-  </body>
+      </div>
+      <div id="tabList" class="tabList"></div>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+</body>
+
 </html>

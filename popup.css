@@ -5,6 +5,8 @@ body {
   font-family: Arial, sans-serif;
   background: #f6f7f9;
   color: #1f2933;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .popup {
@@ -33,7 +35,7 @@ h2 {
   padding: 12px;
 }
 
-.panel + .panel {
+.panel+.panel {
   margin-top: 12px;
 }
 
@@ -44,7 +46,7 @@ h2 {
   font-size: 14px;
 }
 
-.toggle + .toggle {
+.toggle+.toggle {
   margin-top: 10px;
 }
 
@@ -130,7 +132,7 @@ button:hover {
   margin-top: 0;
 }
 
-.tabRow + .tabRow {
+.tabRow+.tabRow {
   margin-top: 8px;
 }
 
