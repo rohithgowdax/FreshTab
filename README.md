@@ -40,12 +40,6 @@ That flow:
 3. clears cookies and storage for that site
 4. returns to the original page
 
-### Keyboard shortcut support
-
-Use the fresh reload shortcut for the active selected tab:
-
-- Windows/Linux: `Ctrl+Shift+R`
-- Mac: `Command+Shift+R`
 
 ## What Gets Cleared
 
