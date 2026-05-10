@@ -23,10 +23,6 @@
   },
   "commands": {
     "fresh-reload-active-tab": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+R",
-        "mac": "Command+Shift+R"
-      },
       "description": "Fresh reload the active selected tab"
     }
   },

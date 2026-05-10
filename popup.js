@@ -4,10 +4,6 @@ const STORAGE_KEYS = {
   selectedTabIds: "selectedTabIds"
 };
 
-function getShortcutLabel() {
-  const isMac = navigator.platform.toLowerCase().includes("mac");
-  return isMac ? "Command+Shift+R" : "Ctrl+Shift+R";
-}
 
 function formatTabLabel(tab) {
   const title = tab.title || "Untitled tab";
@@ -81,13 +77,14 @@ async function renderTabList(selectedTabIds) {
 
   tabList.replaceChildren();
 
+  const tabsPanel = document.getElementById("tabsPanel");
+
   if (trackableTabs.length === 0) {
-    const emptyState = document.createElement("p");
-    emptyState.className = "emptyState";
-    emptyState.textContent = "No regular website tabs are open in this window.";
-    tabList.appendChild(emptyState);
+    if (tabsPanel) tabsPanel.style.display = "none";
     return;
   }
+
+  if (tabsPanel) tabsPanel.style.display = "";
 
   for (const tab of trackableTabs) {
     const row = document.createElement("label");
